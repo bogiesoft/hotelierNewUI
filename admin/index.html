@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roomier Admin - Dashboard</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<!-- <script src="js/jquery-1.12.3.min.js"></script>-->
+<script >
+if(!localStorage.getItem("token") && localStorage.getItem("type").localeCompare("admin") != 0) {
+	localStorage.clear();
+	window.location.replace("login.html");
+}
+</script> 
+
+<!--Icons-->
+<script src="js/lumino.glyphs.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="bload">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>Roomier</span>Admin</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span id="username"></span><span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
+							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
+							<li><a href="#" id="logout"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li id="shDashboard"class="active"><a href="#"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg>Dashboard</a></li>	
+			<li class="parent"><a href="#"><span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span><span id="shUsers">Users</span></a>
+			<li class="parent"><a href="#"><span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span><span id="shProperty">Properties</span></a>
+		</ul>
+
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+				<li class="active">Icons</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="alert bg-success" role="alert">
+					<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg> <span id="successTxt"></span><a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+				<div class="alert bg-warning" role="alert">
+					<svg class="glyph stroked flag"><use xlink:href="#stroked-flag"></use></svg><span id="warningTxt"></span><a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+				<div class="alert bg-danger" role="alert">
+					<svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> <span id="dangerTxt"></span> <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div id="dashboard-content"  class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-blue panel-widget ">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">120</div>
+							<div class="text-muted">New Orders</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-orange panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">52</div>
+							<div class="text-muted">Comments</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">24</div>
+							<div class="text-muted">New Users</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">25.2k</div>
+							<div class="text-muted">Page Views</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div id="dashboard-content-stats" class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Site Traffic Overview</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div  id="dashboard-content-stats-pie" class="row">
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>New Orders</h4>
+						<div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Comments</h4>
+						<div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>New Users</h4>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="56" ><span class="percent">56%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Visitors</h4>
+						<div class="easypiechart" id="easypiechart-red" data-percent="27" ><span class="percent">27%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		<div  id="usersList" class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Users</div>
+					<div class="panel-body">
+						<table data-toggle="table2"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+						    <thead>
+						    <tr>
+						        <th data-field="id" data-checkbox="true" >User ID</th>
+						        <th data-field="name" data-sortable="true">Name</th>
+						        <th data-field="surname"  data-sortable="true">Surname</th>
+						        <th data-field="type" data-sortable="true">User type</th>
+								<th data-field="email" data-sortable="true">Email</th>
+								<th data-field="phone" data-sortable="true">Phone</th>
+								<th data-field="mobile" data-sortable="true">Mobile</th>
+								<th data-field="address" data-sortable="true">Address</th>
+								<th data-field="postcode" data-sortable="true">Zip code</th>
+								<th data-field="town" data-sortable="true">City</th>
+								<th data-field="country" data-sortable="true">Country</th>
+								<th data-field="afm" data-sortable="true">VAT</th>
+								<th data-field="doy" data-sortable="true">VAT Office</th>
+								<th data-field="registration_date" data-sortable="true">Registration date</th>
+								<th data-field="status" data-sortable="true">Status</th>
+						    </tr>
+						    </thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div id="propertiesTb" class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Properties</div>
+					<div class="panel-body">
+						<div id="addProp">
+							<input type="button" id="uploadbox" onClick="singleupload_input.click();" class="singleupload" style="display:none;">
+					        <input type="file" id="singleupload_input" style="display:none;" name="img" value=""/>
+							<input name="propertyID" value=""  type="hidden">
+						
+						</div>
+						<table id="myTable" data-toggle="properties"  data-show-refresh="true" data-show-add="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="property_name" data-sort-order="desc">
+						    <thead>
+						    <tr>
+						        <th data-field="propertyID" data-sortable="true"  data-checkbox="true">ID</th>
+								<th data-field="name" data-sortable="true">Owner</th>
+						        <th data-field="property_name" data-sortable="true">Property</th>
+						        <th data-field="alias"  data-sortable="true">Alias</th>
+						        <th data-field="langs" data-sortable="true">Languages</th>
+								<th data-field="background" data-sortable="true">Background</th>
+								<!--<th data-field="phone" data-sortable="true">Phone</th>
+								<th data-field="fax" data-sortable="true">Mobile</th>
+								<th data-field="address" data-sortable="true">Address</th>
+								<th data-field="postcode" data-sortable="true">Zip code</th>
+								<th data-field="town" data-sortable="true">City</th>
+								<th data-field="country" data-sortable="true">Country</th>
+								<th data-field="geotag" data-sortable="true">GPS</th>
+								<th data-field="logo" data-sortable="true">Logo</th> -->
+						    </tr>
+						    </thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+
+	<!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="../hotelier/js/roomier.config.js"></script>
+	<script type="text/javascript" src="../hotelier/js/jquery.singleuploadimage.js"></script>
+	<script type="text/javascript" src="js/roomier.admin.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script>
+		/*$('#calendar').datepicker({
+		}); */
+
+		!function ($) {
+		    /*$(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); */
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>

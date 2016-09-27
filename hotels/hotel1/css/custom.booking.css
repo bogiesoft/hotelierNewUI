@@ -1,0 +1,180 @@
+body {
+	background: #f1f4f7;
+	background-image: url('../images/homesmpl-1.jpg');
+    background-repeat: no-repeat;  
+	padding-top: 50px;
+	color: #5f6468;
+	width: 99%;
+}
+
+#loading {
+    background-color: #888;
+    position: relative;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center; 
+    height: 500px;
+    
+}
+
+.imgContainer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+    text-align:center; /* Align center inline elements */
+    
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: #888;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+
+.panel-body h4 {
+	font-size: small;
+}
+
+.panel-body p {
+	font-size: small;
+}
+
+.navbar-inverse {
+    background-color: #f5f5f5;
+    height: 70px;
+}
+
+.navbar-inverse img {
+    height: 45px;
+    width: auto;
+}
+
+#bookAlert {
+    padding-top: 40px;
+}
+.row {
+	padding-top: 0px;
+}
+
+.panel-heading {
+    font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	
+}
+
+.panel-default .panel-heading {
+    background: rgba(0,0,0,.25);
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+#bookingPanel label {
+	color: #fff;
+}
+
+#shAvailRooms{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#availRooms table {
+    background-color: #fff; 
+    border-radius: 25px;
+    height: 180px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#roomImg {
+    width: 20%;
+    padding: 10px;
+}
+
+#roomDesc {
+    width: 20%;
+    padding: 10px;
+    vertical-align: top;
+    border-left: 1px dotted #ddd;
+}
+
+#roomDesc h4 {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+#langs {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#availRooms td {
+    height: 50%
+}
+
+.tbDate {
+    border-left: 2px dotted #fff;
+    border-bottom: 2px dotted #fff;
+    background-color: #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tbPrice {
+    border-left: 1px dotted #fff;
+    text-align: center;
+    background-color: #eee;
+}
+
+
+.tbPrice:last-child {
+    text-align: center;
+    background-color: #eee;
+    border-radius: 0 0 25px 0;
+}
+
+.tbDate:last-child {
+    background-color: #ddd;
+    border-radius: 0 25px 0 0;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #FF0142;
+    border-color: #FF0142;
+}

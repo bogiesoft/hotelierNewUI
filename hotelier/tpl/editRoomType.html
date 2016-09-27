@@ -1,0 +1,284 @@
+<!-- <div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default"> -->
+			<!-- <div class="panel-heading">Form Elements</div> -->
+		<form id="editRoomtype" role="form" method="post" enctype="multipart/form-data">
+			<div class="panel-body  tabs">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Room type settings</a></li>
+					<li><a href="#tab2" data-toggle="tab">Room services</a></li>
+					<li><a href="#tab3" data-toggle="tab">Room special prices</a></li>
+					<li><a href="#tab4" data-toggle="tab">Room Images</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="tab1">
+
+							<div class="col-md-6">
+								<input name="roomtypeID" class="form-control" placeholder="Placeholder" value=""  type="hidden">
+								<input name="propertyID" class="form-control" placeholder="Placeholder" value=""  type="hidden">
+								<div class="form-group">
+									<label>Room Type Name</label>
+									<input name="roomtype_name" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>Room Description</label>
+									<textarea name="roomtype_descr" class="form-control"  rows="3"></textarea>
+								</div>
+
+								<div class="form-group">
+									<label>Quantity</label>
+									<input name="quantity" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>Price</label>
+									<input name="price" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Currency</label>
+									<select name="currency" class="form-control">
+										<option selected value="">Select Currency</option>
+										<option value="A$">Australian Dollar</option>
+										<option value="BRL">Brazilian Real </option>
+										<option value="CAD">Canadian Dollar</option>
+										<option value="CZK">Czech Koruna</option>
+										<option value="DKK">Danish Krone</option>
+										<option value="&euro;">Euro</option>
+										<option value="HKD">Hong Kong Dollar</option>
+										<option value="HUF">Hungarian Forint </option>
+										<option value="ILS">Israeli New Sheqel</option>
+										<option value="&yen;">Japanese Yen</option>
+										<option value="MYR">Malaysian Ringgit</option>
+										<option value="MXN">Mexican Peso</option>
+										<option value="NOK">Norwegian Krone</option>
+										<option value="NZD">New Zealand Dollar</option>
+										<option value="PHP">Philippine Peso</option>
+										<option value="PLN">Polish Zloty</option>
+										<option value="&pound;">Pound Sterling</option>
+										<option value="SGD">Singapore Dollar</option>
+										<option value="SEK">Swedish Krona</option>
+										<option value="CHF">Swiss Franc</option>
+										<option value="TWD">Taiwan New Dollar</option>
+										<option value="THB">Thai Baht</option>
+										<option value="TRY">Turkish Lira</option>
+										<option value="$">U.S. Dollar</option>
+									</select>
+
+								</div>
+
+
+							</div>
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label>Min capacity</label>
+									<input name="capacity_min" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>Max capacity</label>
+									<input name="capacity_max" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>Children minimum</label>
+									<select name="child_min" class="form-control">
+										<option value="0">none</option>
+										<option value="1">1 child</option>
+										<option value="2">2 children</option>
+										<option value="3">3 children</option>
+										<option value="4">4 children</option>
+										<option value="5">5 children</option>
+										<option value="6">6 children</option>
+										<option value="7">7 children</option>
+										<option value="8">8+ children</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label>Children max</label>
+									<select name="child_max" class="form-control">
+										<option value="0">none</option>
+										<option value="1">1 child</option>
+										<option value="2">2 children</option>
+										<option value="3">3 children</option>
+										<option value="4">4 children</option>
+										<option value="5">5 children</option>
+										<option value="6">6 children</option>
+										<option value="7">7 children</option>
+										<option value="8">8+ children</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label>Minimum stay</label>
+									<input name="minimum_stay" class="form-control">
+								</div>
+
+							</div>
+
+					</div>
+					<div class="tab-pane fade" id="tab2">
+						<div class="bootstratable">
+							<div class="fixed-table-toolbar">
+								<div class="columns btn-group pull-right">
+									<button class="add_field_button" class="pull-right btn btn-default" type="button" name="addRoomtypeService" title="Add Room Services">
+										<i class="glyphicon glyphicon glyphicon-plus icon-plus"></i>
+									</button>
+								</div>
+							</div>
+							<div class="fixed-table-container">
+								<div class="fixed-table-header">
+									<table></table>
+								</div>
+								<div class="fixed-table-body">
+									<table class="table table-hover" id="roomTypesServicesTbl">
+										<thead>
+											<tr>
+												<th style="">
+													<div class="th-inner sortable">Service</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner ">Description</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Price</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Dialy</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Action</div>
+													<div class="fht-cell"></div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style=""><input type="text" name="service_name[]"></td>
+												<td style=""><input type="text" name="service_descr[]"></td>
+												<td style=""><input type="text" name="service_price[]"></td>
+												<td style=""><input type="checkbox" name="daily[]" value="1" class="daily"/></td>
+												<td style="">Remove</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tab3">
+						<div class="bootstratable">
+							<div class="fixed-table-toolbar">
+								<div class="columns btn-group pull-right">
+									<button class="add_field_price_button" class="pull-right btn btn-default" type="button" name="addRoomtypeSpecialPrices" title="Add Room Special Prices">
+										<i class="glyphicon glyphicon glyphicon-plus icon-plus"></i>
+									</button>
+								</div>
+							</div>
+							<div class="fixed-table-container">
+								<div class="fixed-table-header">
+									<table></table>
+								</div>
+								<div class="fixed-table-body">
+									<table class="table table-hover" id="roomTypesSpecialPricesTbl">
+										<thead>
+											<tr>
+												<th style="">
+													<div class="th-inner sortable">Price</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner ">Start Date</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">End Date</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Action</div>
+													<div class="fht-cell"></div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style=""><input type="text" name="sp_price[]"></td>
+												<td style=""><input type="text" name="sp_startDate[]"></td>
+												<td style=""><input type="text" name="sp_endDate[]"></td>
+												<td style="">Remove</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+					<div class="tab-pane fade" id="tab4">
+						<form id="fileupload" action="" method="POST" enctype="multipart/form-data">
+							<input type="hidden" name="path" value="demo">
+						<!-- <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data"> -->
+							<!-- Redirect browsers with JavaScript disabled to the origin page -->
+							<noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+							<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+							<div class="row fileupload-buttonbar">
+								<div class="col-lg-7">
+									<!-- The fileinput-button span is used to style the file input field as button -->
+									<span class="btn btn-success fileinput-button">
+										<i class="glyphicon glyphicon-plus"></i>
+										<span>Add files...</span>
+										<input type="file" name="files[]" multiple>
+									</span>
+									<button type="submit" class="btn btn-primary start">
+										<i class="glyphicon glyphicon-upload"></i>
+										<span>Start upload</span>
+									</button>
+									<!-- <button type="reset" class="btn btn-warning cancel">
+										<i class="glyphicon glyphicon-ban-circle"></i>
+										<span>Cancel upload</span>
+									</button> -->
+									<button type="button" class="btn btn-danger delete">
+										<i class="glyphicon glyphicon-trash"></i>
+										<span>Delete</span>
+									</button>
+									<span>Select all files...</span>
+									<input type="checkbox" class="toggle">
+									<!-- The global file processing state -->
+									<span class="fileupload-process"></span>
+								</div>
+								<!-- The global progress state -->
+								<div class="col-lg-5 fileupload-progress fade">
+									<!-- The global progress bar -->
+									<div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar progress-bar-success" style="width:0%;"></div>
+									</div>
+									<!-- The extended global progress state -->
+									<div class="progress-extended">&nbsp;</div>
+								</div>
+							</div>
+							<!-- The table listing the files available for upload/download -->
+							<table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+
+					</div>
+				</div>
+				<div id="editRTbtn" class="col-lg-12">
+					<button type="submit" class="btn btn-primary">Edit Room type</button>
+					<button type="reset" id="roomtypeCancel" class="btn btn-default">Cancel</button>
+				</div>
+				<div class="col-lg-12">
+					</br>
+				</div>
+			</div>
+
+		</form>
+		<!-- </div> -->
+	<!-- </div> --><!-- /.col-->
+<!-- </div> --><!-- /.row -->

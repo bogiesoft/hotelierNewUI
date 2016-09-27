@@ -1,0 +1,696 @@
+body {
+	background: #f1f4f7;
+	background-image: url('../images/homesmpl-1.jpg');
+    background-repeat: no-repeat;
+	padding-top: 50px;
+	color: #5f6468;
+	width: 99%;
+}
+
+#loading {
+    background-color: #888;
+    position: relative;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center;
+    height: 500px;
+
+}
+
+
+#required {
+    color: red;
+}
+
+.imgContainer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+    text-align:center; /* Align center inline elements */
+
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: #888;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+/*Custom modal*/
+
+/* Modal Footer */
+.modal-footer {
+    background-color: rgba(0,0,0,.25);
+    padding: 2px 16px;
+    color: white;
+    position: absolute;
+    bottom: -10;
+    width: 100%;
+}
+
+.modal-content {
+    position: fixed;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.80);
+    z-index: 9999;
+    overflow:  hidden;
+}
+/* Modal Content */
+.modal-content > div {
+    position: fixed;
+    margin: auto;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    min-width: 350px;
+    max-height: 420px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: #000;
+
+}
+
+/* Modal Body */
+.modal-content-body .modal-body {
+    clear: both;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 2px 10px;
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #fff;
+    line-height: 50px;
+    width: 100%;
+    padding: 2px 16px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #888;
+    z-index: 99999;
+    border-radius: 5px 5px 0 0;
+}
+
+.modal-header h2 {
+    color: #fff;
+}
+
+
+.modal-content .modal-header .bookCart span {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    cursor: hand;
+    color: #888;
+}
+
+.modal-content-body .nav-pills li a {
+    color: #666666;
+}
+
+.modal-content-body .nav-pills li.active > a {
+    background: #d6d6d6;
+    color: #666666;
+}
+
+.modal-content-body .nav-pills li.active > a:hover {
+    background: #d6d6d6;
+    color: #666666;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/*Custom Panels*/
+.panel-body h4 {
+	font-size: small;
+}
+
+.panel-body p {
+	font-size: small;
+}
+
+.navbar-inverse {
+    background-color: #f5f5f5;
+    height: 70px;
+}
+
+.navbar-inverse img {
+    height: 45px;
+    width: auto;
+}
+
+#bookAlert {
+    padding-top: 40px;
+}
+.row {
+	padding-top: 0px;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-xs-10 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#shCheckAvailForm .col-md-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-group svg {
+    height: 25px;
+}
+
+.rm button {
+    background-color: #FF0142;
+    border-color: #FF0142;
+    color: #fff;
+    margin-top: 25px;
+}
+
+
+.panel-heading {
+    font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+
+.panel-default .panel-heading {
+    background: rgba(0,0,0,.25);
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+#shCheckout {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shCheckout .panel-body {
+    background-color: #fff;
+}
+
+#shCheckout .panel-body li {
+    list-style: none;
+    border-bottom: 1px dotted;
+}
+
+#shCheckout .panel-body li label {
+    width: 50%;
+}
+
+#shCheckout .panel-body li span {
+    float: right;
+}
+
+
+.bookCart {
+    float: right;
+}
+
+.book-cart-menu {
+	display: inline-block;
+	margin-right: 5px;
+	float: right;
+	list-style: none;
+	padding: 0;
+
+}
+
+.booking-list-body, .booking-list-checkout-body {
+    width: 100%;
+    background-color: #fff;
+    color: #888;
+    text-align: right;
+    padding: 0;
+}
+
+.booking-list-body ul, .booking-list-checkout-body ul {
+    list-style-type: none;
+}
+
+.check_in_out {
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+}
+.check_in_out label {
+    width: 50%;
+    text-align: left;
+}
+
+.check_in_out span {
+    width: 50%;
+}
+
+.booking-list-checkout-body .hotelSrv, .roomsSrv {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.book-cart-menu a {
+	color: #fff;
+}
+
+.book-cart-menu a:hover, .book-cart-menu a:focus {
+	text-decoration: none;
+}
+
+.book-cart-menu .booking-list a {
+    padding-left: 5px;
+	color: #8E8D8E;
+}
+
+.booking-list li {
+    padding-left: 5px;
+    padding-right: 5px;
+	color: #8E8D8E;
+    line-height: 35px;
+    text-align: right;
+}
+.booking-list li span svg, .booking-list-checkout li span svg {
+    width: 25px;
+}
+
+
+.booking-list li:hover {
+    color: #FC3064;
+}
+
+.booking-list li:nth-child(even) {
+    background-color: #eee;
+}
+
+.booking-list li:last-child {
+    background-color: #fff;
+}
+
+.booking-list-footer {
+    text-align: center;
+}
+
+.hotel-list-services, .rooms-list-services li:first-child {
+    border-top: 1px solid;
+}
+
+.hotel-list-services li:last-child {
+    border-bottom: 1px solid;
+}
+
+.hotel-list-services,.rooms-list-services li{
+    text-align: left;
+}
+
+.hotelServices label {
+    font-weight: bold;
+}
+
+.booking-list-checkout {
+    text-align: left;
+}
+
+.booking-list-checkout p {
+    border-top: 1px solid;
+    line-height: 30px;
+    padding-top: 5px;
+}
+
+.booking-list-checkout-footer {
+    font-style: italic;
+    font-size: 1.5em;
+    text-align: right;
+}
+
+.trc {
+    background-color: #ddd;
+    text-align: right;
+    padding-right: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.booking-list-checkout p img {
+    float: left;
+    margin: 5px 10px 10px 10px;
+
+}
+
+.booking-list-checkout span {
+    font-weight: bold;
+}
+
+.trashBook .glyph {
+    height: 20px;
+}
+
+#emptyRow {
+    padding-right: 40px;
+    text-align: right;
+}
+
+#book-total-cart {
+    text-align: right;
+    padding-right: 30px;
+    border-top: 1px solid #ddd;
+}
+
+#bookingPanel label {
+	color: #fff;
+}
+
+
+#availRooms table {
+    background-color: #fff;
+    border-radius: 25px;
+    /*! height: 180px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#roomAvailTabs {
+    vertical-align: text-top;
+}
+
+#roomAvailTabs .tab-content {
+    vertical-align: text-top;
+    max-width: 100%;
+    height: 230px;
+    margin-left: 5px;
+    word-wrap: break-word;
+}
+
+#roomAvailTabs .pilltab2 table {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+#roomAvailTabs .pilltab2 table thead tr td {
+    width: 50px;
+    height: 40px;
+    color: #92AFDD;
+    text-align: center;
+}
+
+#roomAvailTabs .pilltab2 table tr td {
+    color: #666;
+}
+
+.break-down {
+    font-weight: bold;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.check-in-out {
+    font-style: italic;
+    color: #888
+}
+
+.week_rate, .week_norate, .week_num {
+    text-align: center;
+    font-style: italic;
+
+}
+
+td.week_num {
+    width: 70px;
+    text-align: left;
+}
+
+
+td.week_norate {
+    background-color: #eee;
+    width: 50px;
+    height: 40px;
+}
+
+td.week_rate{
+    background-color: #BECFEA;
+    width: 50px;
+    height: 40px;
+}
+
+
+#datePriceRate {
+    width: 200px;
+}
+#roomImg {
+    width:400px;
+    max-height: 300px;
+}
+
+.roomImg_thump {
+    width: 210px;
+}
+
+#roomDesc {
+    width: 20%;
+    padding: 10px;
+    vertical-align: top;
+    border-left: 1px dotted #ddd;
+}
+
+#roomDesc h4 {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+#langs {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#availRooms td {
+    /*! height: 50%; */
+}
+
+#roomgrid {
+    min-height: 290px;
+    vertical-align: text-top;
+}
+
+.tbDate {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.room {
+    /*min-height: 290px;*/
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.RowRes {
+    border-left: 2px dotted #fff;
+    text-align: center;
+    background-color: #eee;
+    width: 150px;
+    border-radius: 0 5px 5px 0;
+}
+
+.tbPrice {
+    text-align: center;
+    background-color: #eee;
+    border-left: 1px dotted #fff;
+    padding: 5px;
+}
+
+.tbPrice:first-child {
+    text-align: center;
+    background-color: #eee;
+    border-radius: 0 0 0 25px;
+}
+.tbPrice:last-child {
+    text-align: center;
+    background-color: #eee;
+    border-radius: 0 0 25px 0;
+}
+.tbDate {
+    background-color: #ddd;
+    border-left: 1px dotted #fff;
+}
+
+.tbDate:first-child {
+    background-color: #ddd;
+    border-radius: 25px 0 0;
+}
+
+.tbDate:last-child {
+    background-color: #ddd;
+    border-radius: 0 25px 0 0;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #FF0142;
+    border-color: #FF0142;
+}
+
+#shBookingConfirmation .panel-body {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+#shBookingConfirmation .room-row-data {
+    border-top: 1px dotted;
+}
+
+/***/
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+@media print {
+   @page {size: landscape}
+   body * { display:none; }
+   #shBookingConfirmation  * {
+       display:block;
+
+    }
+
+    #shBookingConfirmation .col-xs-10 {
+        width: 90%;
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+
+    #shBookingConfirmation .col-xs-10 .panel-body {
+        border: 1px solid #000;
+    }
+}
