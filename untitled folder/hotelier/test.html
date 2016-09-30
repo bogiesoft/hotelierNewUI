@@ -1,0 +1,66 @@
+
+
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+function myIP(){
+$("#btn").click(function(){
+
+            var geocoder =  new google.maps.Geocoder();
+    geocoder.geocode( { 'address': $('#city').val()}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            $('.push-down').text("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng()); 
+          } else {
+            $('.push-down').text("Something got wrong " + status);
+          }
+        });
+});
+}
+ </script>
+
+  <style>
+    .push-down {margin-top: 25px;}
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+</head>
+<body onload="myIP()">
+<input type="text" id= "city">
+<input id="btn" type="button" value="get Lat&Long" />
+  <div class="push-down"></div>
+  
+   <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
+
+</body>
+</html>
+

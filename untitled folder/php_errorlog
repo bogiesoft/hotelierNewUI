@@ -1,0 +1,85 @@
+[24-Jun-2016 08:04:53 CST6CDT] PHP Parse error:  syntax error, unexpected '$dest' (T_VARIABLE) in /home/bookroomier/public_html/properties.php on line 195
+[24-Jun-2016 08:06:48 CST6CDT] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/bookroomier/public_html/properties.php on line 240
+[24-Jun-2016 08:10:00 CST6CDT] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/bookroomier/public_html/properties.php on line 113
+[01-Jul-2016 08:55:24 CST6CDT] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/bookroomier/public_html/properties.php on line 854
+[08-Sep-2016 15:19:03 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/bookroomier/public_html/bookings.php on line 1405
+[08-Sep-2016 15:21:03 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/bookroomier/public_html/bookings.php on line 1405
+[08-Sep-2016 15:21:23 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/bookroomier/public_html/bookings.php on line 1405
+[08-Sep-2016 15:21:33 CST6CDT] PHP Parse error:  syntax error, unexpected end of file in /home/bookroomier/public_html/bookings.php on line 1405
+[08-Sep-2016 15:28:14 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:777
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(777): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(661): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-16')
+#2 /home/bookroomier/public_html/bookings.php(129): getRoomIdentity(23, 8, '2016-09-12', '2016-09-16')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 777
+[08-Sep-2016 15:29:37 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:777
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(777): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(661): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-16')
+#2 /home/bookroomier/public_html/bookings.php(129): getRoomIdentity(28, 8, '2016-09-12', '2016-09-16')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 777
+[08-Sep-2016 15:31:01 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:777
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(777): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(661): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-16')
+#2 /home/bookroomier/public_html/bookings.php(129): getRoomIdentity(28, 8, '2016-09-12', '2016-09-16')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 777
+[08-Sep-2016 15:33:27 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:720
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(720): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(604): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-16')
+#2 /home/bookroomier/public_html/bookings.php(131): getRoomIdentity(23, 8, '2016-09-12', '2016-09-16')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 720
+[08-Sep-2016 15:51:08 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:781
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(781): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(665): get_roomsID_free(Array, 8, 8, '2016-09-11', '2016-09-16')
+#2 /home/bookroomier/public_html/bookings.php(129): getRoomIdentity(23, 8, '2016-09-11', '2016-09-16')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 781
+[09-Sep-2016 06:59:23 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:780
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(780): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(664): get_roomsID_free(Array, 8, 8, '2016-09-09', '2016-09-11')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(28, 8, '2016-09-09', '2016-09-11')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 780
+[09-Sep-2016 07:03:18 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:780
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(780): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(664): get_roomsID_free(Array, 8, 8, '2016-09-09', '2016-09-11')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(23, 8, '2016-09-09', '2016-09-11')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 780
+[09-Sep-2016 07:19:03 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:782
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(782): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(666): get_roomsID_free(Array, 8, 8, '2016-09-11', '2016-09-14')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(23, 8, '2016-09-11', '2016-09-14')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 782
+[09-Sep-2016 07:29:59 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:782
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(782): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(666): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-14')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(23, 8, '2016-09-12', '2016-09-14')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 782
+[09-Sep-2016 07:31:39 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:785
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(785): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(668): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-14')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(23, 8, '2016-09-12', '2016-09-14')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 785
+[09-Sep-2016 07:33:30 CST6CDT] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (8) at position 0 (8): Unexpected character' in /home/bookroomier/public_html/bookings.php:785
+Stack trace:
+#0 /home/bookroomier/public_html/bookings.php(785): DateTime->__construct('8')
+#1 /home/bookroomier/public_html/bookings.php(668): get_roomsID_free(Array, 8, 8, '2016-09-12', '2016-09-14')
+#2 /home/bookroomier/public_html/bookings.php(130): getRoomIdentity(23, 8, '2016-09-12', '2016-09-14')
+#3 {main}
+  thrown in /home/bookroomier/public_html/bookings.php on line 785

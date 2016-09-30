@@ -1,0 +1,60 @@
+body {
+	background: #f1f4f7;
+	background-image: url('../images/homesmpl-1.jpg');
+  background-repeat: no-repeat;  
+	padding-top: 50px;
+	color: #5f6468;
+	width: 99%;
+}
+
+
+.panel-body h4 {
+	font-size: small;
+}
+
+.panel-body p {
+	font-size: small;
+}
+
+.navbar-inverse {
+    background-color: #f5f5f5;
+    height: 70px;
+}
+
+.navbar-inverse img {
+    height: 45px;
+    width: 80%;
+}
+
+.row {
+	padding-top: 80px;
+}
+
+.panel-heading {
+    font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	
+}
+
+.panel-default .panel-heading {
+    background: rgba(0,0,0,.25);
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+#bookingPanel label {
+	color: #fff;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #FF0142;
+    border-color: #FF0142;
+}

@@ -1,0 +1,80 @@
+/***
+ * Roomier
+ **/
+ 
+#bload { visibility: hidden; }
+
+#editRTbtn { 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #eee;
+    border-top: 1px dotted #eee;
+    text-align: -moz-right;
+}
+
+#loading {
+    background-color: #888;
+    position: relative;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center; 
+    height: 500px;
+    
+}
+.imgContainer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+    text-align:center; /* Align center inline elements */
+    
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: #888;
+    opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    text-align: center;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+.table-condensed thead tr:first-child {
+    background-color: #30A5FF;
+    color: #fff;
+}
+
+.old.disabled.day {
+   color: #ddd;
+}
+
+td.active.day {
+    background-color: #30A5FF;
+}
+
+li.parent a {
+    font-weight: bold;
+}
+
+li.parent .children li a {
+    font-weight: lighter;
+}

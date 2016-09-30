@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roomier Login</title>
+
+<link rel="icon" href="/hotelier/images/roomier_icon_grey.png">
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/custom.login.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+
+
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+            <img class="gmroomlogo" src="http://roomier.eu/clients/images/roomier-w.png"/>
+			<div class="login-panel">
+				<div id="loginPanel">
+					<div class="panel-heading">Log in Area</div>
+					<div class="panel-body">
+						<fieldset>
+							<div  id="login-notify"  class="alert bg-success" role="alert">
+								<svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"></use></svg> <span id="login-notify-txt"></span><a href="#" id="login-notify-close" class="pull-right"><span  class="glyphicon glyphicon-remove"></span></a>
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="E-mail" name="login-form-username" id="login-form-username" type="email" autofocus="">
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Password" name="login-form-password" id="login-form-password" type="password" value="">
+							</div>
+                            <button class="btn btn-success"  id="login-form-admin" name="login-form-admin">Login</button>
+							<div class="checkbox">
+								<label>
+									<input name="remember" type="checkbox" value="Remember Me">Remember Me
+								</label>
+                            </div>
+                            <h4><a id="shregisterPanel" href="#">Signup </a></h4>
+                            	<h4><a href="#" id="shresetPanel">Forgot Password?</a></h4>
+						</fieldset>
+					</div>
+				</div>
+				<div id="registerPanel">
+					<div class="panel-heading">Register</div>
+					<div class="panel-body">
+						<fieldset>
+							<div  id="register-notify"  class="alert bg-success" role="alert">
+								<svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"></use></svg> <span id="register-notify-txt"></span><a href="#" id="register-notify-close" class="pull-right"><span  class="glyphicon glyphicon-remove"></span></a>
+							</div>
+							<div class="form-group">
+								<label for="register-form-name">Name:</label>
+								<input type="text" id="register-form-name" name="register-form-name" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-surname">Surname:</label>
+								<input type="text" id="register-form-surname" name="register-form-surname" value="" class="form-control" />
+							</div>
+
+
+							<div class="form-group">
+								<label for="register-form-email">Email Address:</label>
+								<input type="text" id="register-form-email" name="register-form-email" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-phone">Phone:</label>
+								<input type="text" id="register-form-phone" name="register-form-phone" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-mobile">Mobile:</label>
+								<input type="text" id="register-form-mobile" name="register-form-mobile" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-address">Address:</label>
+								<input type="text" id="register-form-address" name="register-form-address" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-address">Zip code:</label>
+								<input type="text" id="register-form-zip" name="register-form-zip" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-town">City:</label>
+								<input type="text" id="register-form-town" name="register-form-town" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-country">Country:</label>
+								<input type="text" id="register-form-country" name="register-form-country" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-vat">VAT:</label>
+								<input type="text" id="register-form-vat" name="register-form-vat" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-doy">VAT Registration Office:</label>
+								<input type="text" id="register-form-doy" name="register-form-doy" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-password">Choose Password:</label>
+								<input type="password" id="register-form-password" name="register-form-password" value="" class="form-control" />
+							</div>
+
+							<div class="form-group">
+								<label for="register-form-repassword">Re-enter Password:</label>
+								<input type="password" id="register-form-repassword" name="register-form-repassword" value="" class="form-control" />
+							</div>
+
+							<button class="btn btn-primary" id="register-form-submit" name="register-form-submit" value="register">Register Now</button>
+							<a href="#" class="pull-right" id="backloginPanel">< Back to login</a>
+						</fieldset>
+					</div>
+				</div>
+				<div id="resetPanel">
+					<div class="panel-heading">New password request</div>
+					<div class="panel-body">
+						<fieldset>
+							<div  id="resetPass-notify"  class="alert bg-success" role="alert">
+								<svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"></use></svg> <span id="resetPass-notify-txt"></span> <a href="#" class="pull-right"><span  id="resetPass-notify-close" class="glyphicon glyphicon-remove"></span></a>
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="E-mail" name="newpass-form-email" id="newpass-form-email" type="email" autofocus="">
+							</div>
+							<button class="btn btn-primary"  id="newpass-form-hotelier" name="newpass-form-hotelier">Request</button>
+							<a href="#" class="pull-right" id="backloginPanel_2">< Back to login</a>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</div><!-- /.col-->
+	</div><!-- /.row -->
+
+
+
+	<!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/roomier.config.js"></script>
+	<script src="js/roomier.login.js"></script>
+
+	<script>
+		!function ($) {
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){
+				$(this).find('em:first').toggleClass("glyphicon-minus");
+			});
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>
+</body>
+
+</html>

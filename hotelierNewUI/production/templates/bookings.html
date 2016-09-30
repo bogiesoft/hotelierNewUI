@@ -58,16 +58,148 @@
   </div>
 </div>
 
+
+
+
+
+<!--##################################################-->
+<!--##################################################-->
 <!-- Modal that show up when action button is pressed-->
+<!--##################################################-->
+<!--##################################################-->
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Bookling Details</h4>
+        <h4 class="modal-title" id="myModalLabel"> <b>Details</b>: Pin - {{booking.pin}} / Code - {{booking.reservationCode}}</h4>
       </div>
       <div class="modal-body">
-        ...
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Customer Info</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <br />
+                <form id="" data-parsley-validate class="form-horizontal form-label-left">
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3" for="first-name">First Name <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-3">
+                      <input  type="text" id="first-name" class="form-control col-md-7 col-xs-12" value="{{booking.name}}">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="last-name" name="last-name" value="{{booking.lastName}}" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">E-mail</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="email" value="{{booking.email}}" class="form-control col-md-7 col-xs-12" type="email" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Telephone</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="tel" value="{{booking.phone}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="city" class="control-label col-md-3 col-sm-3 col-xs-12">City</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="city" value="{{booking.city}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address" class="control-label col-md-3 col-sm-3 col-xs-12">Address</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="address" value="{{booking.address}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="x_title">
+                    <h2>Room Details</h2>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Check In</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="checkin" value="{{booking.checkIn}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Check Out</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="checkout" value="{{booking.checkOut}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="form-group" ng-repeat="room in rooms">
+                    <label for="room{{$index}}" class="control-label col-md-3 col-sm-3 col-xs-12">Room {{$index + 1}}</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="room{{$index}}" value="{{room.roomIdentify}}" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                    </div>
+                  </div>
+
+                  <div class="x_title">
+                    <h2>Hotel Servises</h2>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="form-group" ng-repeat="hotelService in hotelServices">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="checkbox" name="" id="hotelServices{{$index}}" value="{{hotelService.service_name}}" class="flat" /> {{hotelService.service_name}}
+                    </div>
+                  </div>
+
+                  <div class="x_title">
+                    <h2>Room Servises</h2>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="form-group" ng-repeat="roomService in roomServices">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="checkbox" name="" id="hotelServices{{$index}}" value="{{roomService.service_name}}" class="flat" /> {{roomService.service_name}}
+                    </div>
+                  </div>
+
+                  <div class="x_title">
+                    <h2>Booking notes</h2>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Notes</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <textarea class="resizable_textarea form-control" value="{{booking.notes}}">{{booking.notes}}</textarea>
+                    </div>
+                  </div>
+
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

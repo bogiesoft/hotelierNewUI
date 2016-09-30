@@ -1,0 +1,193 @@
+<!-- <div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default"> -->
+			<!-- <div class="panel-heading">Form Elements</div> -->
+<form id="editProperty" role="form" method="post" enctype="multipart/form-data">
+			<div class="panel-body  tabs">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Property</a></li>
+					<li><a href="#tab2" data-toggle="tab">Property services</a></li>
+					<li><a href="#tab3" data-toggle="tab">Property Logo</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="tab1">
+						<div class="col-md-6">
+							<input name="propertyID" class="form-control" placeholder="Placeholder" value=""  type="hidden">
+							<div class="form-group">
+								<label>Property</label>
+								<input name="property_name" class="form-control" placeholder="i.e. Hotel_1" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Property Name</label>
+								<input name="eponymia" class="form-control" placeholder="i.e. Las Vegas" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Contact</label>
+								<input name="contact" class="form-control" placeholder="i.e. Terry Benedict" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Phone</label>
+								<input name="phone" class="form-control" placeholder="i.e. 00302101234567" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Fax</label>
+								<input name="fax" class="form-control" placeholder="i.e. 00302101234567" value="">
+							</div>
+
+							<div class="form-group">
+								<label>eMail</label>
+								<input name="emailprop" class="form-control" placeholder="i.e. contact@las-vegas.com" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Website</label>
+								<input name="website" class="form-control" placeholder="i.e. www.las-vegas.com" value="">
+							</div>
+
+						</div>
+						<div class="col-md-6">
+
+							<div class="form-group">
+								<label>Geotag</label>
+								<input name="geotag" class="form-control" placeholder="i.e. 34.1233456" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Address</label>
+								<input name="address" class="form-control" placeholder="i.e. 5th Avenue Str." value="">
+							</div>
+
+							<div class="form-group">
+								<label>City</label>
+								<input name="town" class="form-control" placeholder="i.e. Las Vegas" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Zip Code</label>
+								<input name="postcode" class="form-control" placeholder="i.e. 22226" value="">
+							</div>
+
+							<div class="form-group">
+								<label>Country</label>
+								<input name="country" class="form-control" placeholder="i.e. U.S.A." value="">
+							</div>
+							<div class="form-group">
+								<label>Currency (for services)</label>
+								<select name="currency" class="form-control">
+									<option selected value="">Select Currency</option>
+									<option value="A$">Australian Dollar</option>
+									<option value="BRL">Brazilian Real </option>
+									<option value="CAD">Canadian Dollar</option>
+									<option value="CZK">Czech Koruna</option>
+									<option value="DKK">Danish Krone</option>
+									<option value="&euro;">Euro</option>
+									<option value="HKD">Hong Kong Dollar</option>
+									<option value="HUF">Hungarian Forint </option>
+									<option value="ILS">Israeli New Sheqel</option>
+									<option value="&yen;">Japanese Yen</option>
+									<option value="MYR">Malaysian Ringgit</option>
+									<option value="MXN">Mexican Peso</option>
+									<option value="NOK">Norwegian Krone</option>
+									<option value="NZD">New Zealand Dollar</option>
+									<option value="PHP">Philippine Peso</option>
+									<option value="PLN">Polish Zloty</option>
+									<option value="&pound;">Pound Sterling</option>
+									<option value="SGD">Singapore Dollar</option>
+									<option value="SEK">Swedish Krona</option>
+									<option value="CHF">Swiss Franc</option>
+									<option value="TWD">Taiwan New Dollar</option>
+									<option value="THB">Thai Baht</option>
+									<option value="TRY">Turkish Lira</option>
+									<option value="$">U.S. Dollar</option>
+								</select>
+
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tab2">
+						<div class="bootstratable">
+							<div class="fixed-table-toolbar">
+								<div class="columns btn-group pull-right">
+									<button class="addPropertyService" class="pull-right btn btn-default" type="button" name="addPropertyService" title="Add Room Services">
+										<i class="glyphicon glyphicon glyphicon-plus icon-plus"></i>
+										Add Service
+									</button>
+								</div>
+							</div>
+							<div class="fixed-table-container">
+								<div class="fixed-table-header">
+									<table></table>
+								</div>
+								<div class="fixed-table-body">
+									<table class="table table-hover" id="propertyServicesTbl">
+										<thead>
+											<tr>
+												<th style="">
+													<div class="th-inner sortable">Service</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner ">Description</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Price</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Dialy</div>
+													<div class="fht-cell"></div>
+												</th>
+												<th style="">
+													<div class="th-inner">Action</div>
+													<div class="fht-cell"></div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style=""><input type="text" name="service_name[]"></td>
+												<td style=""><input type="text" name="service_descr[]"></td>
+												<td style=""><input type="text" name="service_price[]"></td>
+												<td style=""><input type="checkbox" name="daily[]" value="1" class="daily"/></td>
+												<td style="">Remove</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="tab3">
+						<div class="form-group">
+								<label>Logo</label>
+								<div id="paper">
+									<div id="console">
+										<div id="uploadbox" onClick="singleupload_input.click();" class="singleupload"></div>
+										<input type="file" id="singleupload_input" style="display:none;" name="img" value=""/>
+									</div>
+								</div>
+								<div id="imageinfo">
+									<a href="#" id="return_url_text" target="_blank">Preview</a>
+								</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+				<div id="propertyBtn" class="form-group">
+					<button type="submit" class="btn btn-primary">Update Property</button>
+					<button type="reset" id="editPropertyCancel" class="btn btn-default">Cancel</button>
+				</div>
+	</form>
+		<!-- </div> -->
+	<!-- </div> --><!-- /.col-->
+<!-- </div> --><!-- /.row -->
